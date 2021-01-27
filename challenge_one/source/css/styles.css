@@ -1,0 +1,115 @@
+@font-face {
+    font-family: font-bold;
+    src: url(../../assets/fonts/KumbhSans-Bold.ttf)
+}
+
+@font-face {
+    font-family: font-light;
+    src: url(../../assets/fonts/KumbhSans-Light.ttf)
+}
+
+@font-face {
+    font-family: font-regular;
+    src: url(../../assets/fonts/KumbhSans-Regular.ttf)
+}
+
+body {
+    background-color: hsl(185, 100%, 54%);
+}
+
+.contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card-contain {
+    width: 350px;
+    height: 350px;
+    border-radius: 30px;
+    background-color: white;
+}
+
+.img-top {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    transform: translateY(-40%);
+}
+
+.icon__card-icon {
+    width: 100px;
+    border: solid white 10px;
+    border-radius: 200px;
+}
+
+.dates-contain {
+    text-align: center;
+    transform: translateY(-4rem);
+    border-bottom: solid 1px rgb(221, 216, 216);
+}
+
+.name-age {
+    font-family: font-bold;
+    color: hsl(229, 23%, 23%)
+}
+
+.name-age::after {
+    color: hsl(227, 10%, 46%);
+    font-family: font-light;
+    content: '26';
+    padding: 0 0 0 10px;
+}
+
+.country {
+    color: hsl(227, 10%, 46%);
+    font-family: font-light;
+}
+
+.social-stats {
+    display: flex;
+    justify-content: center;
+    transform: translateY(-4rem)
+}
+
+.social-stats ul li {
+    font-family: font-bold;
+    color: hsl(229, 23%, 23%);
+    font-size: 1.3rem;
+    padding: 0 0 0 3.2rem;
+    transform: translateX(-3rem);
+    list-style: none;
+    display: inline-block;
+}
+
+.social-stats li:nth-child(1):before {
+    font-size: 10px;
+    color: hsl(227, 10%, 46%);
+    font-family: font-regular;
+    position: absolute;
+    transform: translateY(2.5em) translateX(-.1rem);
+    content: 'Followers';
+}
+
+.social-stats li:nth-child(2):before {
+    font-size: 10px;
+    color: hsl(227, 10%, 46%);
+    font-family: font-regular;
+    position: absolute;
+    transform: translateY(2.5em) translateX(1rem);
+    content: 'Likes';
+}
+
+.social-stats li:nth-child(3):before {
+    font-size: 10px;
+    color: hsl(227, 10%, 46%);
+    font-family: font-regular;
+    position: absolute;
+    transform: translateY(2.5em) translateX(0.5rem);
+    content: 'Photos';
+}
