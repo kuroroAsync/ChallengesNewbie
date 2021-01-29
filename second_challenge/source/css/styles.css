@@ -3,7 +3,7 @@
     --VeryDarkMagenta: hsl(300, 43%, 22%);
     --SoftPink: hsl(333, 80%, 67%);
     --DarkGrayishMagenta: hsl(303, 10%, 53%);
-    --LightGrayishMagenta: hsl(300, 50%, 95%);
+    --LightGrayishMagenta: hsl(300, 65%, 97%);
     --White: hsl(0, 0%, 100%);
 }
 
@@ -47,6 +47,8 @@ body {
     padding: 1rem 1rem 1rem 1rem;
     background-color: var(--LightGrayishMagenta);
     font-family: Spartan;
+    color: var(--VeryDarkMagenta);
+    font-weight: 700;
 }
 
 .head-contain__stars ul {
