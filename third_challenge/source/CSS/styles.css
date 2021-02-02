@@ -1,0 +1,170 @@
+:root {
+    --LightGray: hsl(204, 43%, 93%);
+    --Cyan: hsl(179, 62%, 43%);
+    --Cyan-light: hsl(179, 73%, 47%);
+    --BrightYellow: hsl(71, 64%, 48%);
+    --GrayishBlue: hsl(218, 22%, 67%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Karla;
+}
+
+
+/* grid-container */
+
+.main-container {
+    box-shadow: 0 0 20px 0 rgba(51, 51, 51, 0.672);
+    display: grid;
+    grid-template-columns: repeat(2, 320px);
+    grid-template-rows: 220px 290px;
+    border-radius: 20px;
+}
+
+
+/* grid-items */
+
+.item {
+    padding: 1.5rem 0 0 2.5rem;
+}
+
+.item:nth-child(1) {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: var(--LightGray);
+    grid-column: 1 / 4;
+    order: 0;
+}
+
+.item:nth-child(2) {
+    display: flex;
+    flex-flow: column wrap;
+    color: var(--LightGray);
+    background-color: var(--Cyan);
+    border-bottom-left-radius: 8px;
+    order: 1;
+}
+
+.item:nth-child(3) {
+    color: var(--LightGray);
+    background-color: var(--Cyan-light);
+    border-bottom-right-radius: 8px;
+    order: 2;
+}
+
+
+/* grid item one header */
+
+.item__title {
+    color: var(--Cyan);
+}
+
+.item__sub-title {
+    color: var(--BrightYellow);
+}
+
+.item__paragraph {
+    line-height: 25px;
+    color: var(--GrayishBlue);
+    font-size: 16px;
+    font-weight: 200;
+}
+
+
+/* grid item two*/
+
+.item___price {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+.item___price::after {
+    padding: 0 0 0 1rem;
+    font-weight: 100;
+    font-size: 16px;
+    content: 'per month';
+}
+
+.item___button {
+    font-family: Karla;
+    color: var(--LightGray);
+    font-size: 18px;
+    box-shadow: 0 0 15px 0 rgba(51, 51, 51, 0.309);
+    background-color: var(--BrightYellow);
+    border-style: none;
+    width: 80%;
+    height: 50px;
+    margin: 1rem 0 0 0;
+}
+
+
+/* grid item tree */
+
+.item___paragraph {
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 23px;
+    max-width: 70%;
+}
+
+@media screen and (max-width: 768px) {
+    .main-container {
+        height: 80vh;
+        grid-template-columns: 400px;
+        grid-template-rows: 260px;
+    }
+    .item:nth-child(1) {
+        grid-column: 1;
+        padding-bottom: 2rem;
+    }
+    .item__paragraph {
+        color: var(--GrayishBlue);
+        font-size: 16px;
+        font-weight: 200;
+        width: 80%;
+    }
+    .item:nth-child(2) {
+        border-bottom-left-radius: 0;
+        padding-bottom: 2rem;
+        order: 1;
+        font-size: 20px;
+    }
+    .item:nth-child(3) {
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+        padding: 2rem;
+        order: 2;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .main-container {
+        height: 80vh;
+        grid-template-columns: 300px;
+        grid-template-rows: 350px;
+    }
+    .item:nth-child(1) {
+        font-size: 16px;
+    }
+    .item__title {
+        color: var(--Cyan);
+        font-size: 23px;
+    }
+    .item:nth-child(2) {
+        font-size: 13px;
+    }
+    .item___title {
+        font-size: 18px;
+    }
+}
