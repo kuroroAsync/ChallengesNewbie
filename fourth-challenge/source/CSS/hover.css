@@ -1,0 +1,12 @@
+:root{
+    --VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+}
+.card__share:hover{
+    background: var(--VeryDarkGrayishBlue);
+    transition: .5s ease;
+}
+.card__share-icon:hover{
+    transition: .5s ease;
+    background-color: #2223;
+    border-radius: 10px;
+}
